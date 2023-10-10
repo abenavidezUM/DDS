@@ -1,0 +1,283 @@
+{
+	"info": {
+		"_postman_id": "97405a48-5908-4bc7-9fe5-484ad62026f3",
+		"name": "restfake_RealizacionDeQuerys",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26925398"
+	},
+	"item": [
+		{
+			"name": "ingresarProductoPrecioAlto",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"Tequila\",\r\n    \"price\": 1600,\r\n    \"description\": \"BebidaBlanca\",\r\n    \"category\": \"Alcohol\",\r\n    \"image\": \"Tequila.png\",\r\n    \"rating\": {\r\n        \"rate\": 10.0,\r\n        \"contador\": 2\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/fakestoreapi.com/products",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"fakestoreapi.com",
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ingresarProductoPrecioBajo",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"Martini\",\r\n    \"price\": 600,\r\n    \"description\": \"Trago\",\r\n    \"category\": \"Alcohol\",\r\n    \"image\": \"Martini.png\",\r\n    \"rating\": {\r\n        \"rate\": 8.0,\r\n        \"contador\": 1\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/fakestoreapi.com/products",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"fakestoreapi.com",
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "obtenerProductoPorID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/fakestoreapi.com/products/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"fakestoreapi.com",
+						"products",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "obtenerTodosLosPoductos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/fakestoreapi.com/products",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"fakestoreapi.com",
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "obtenerProductoConPrecioMayorA",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8080/fakestoreapi.com/products/busquedaPorPrecioMayorA?precioMinimo=1000",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"fakestoreapi.com",
+						"products",
+						"busquedaPorPrecioMayorA"
+					],
+					"query": [
+						{
+							"key": "precioMinimo",
+							"value": "1000"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "obtenerProductoConPrecioMayorA1",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/fakestoreapi.com/products/busquedaPorPrecioMayorA1?precioMinimo=1000",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"fakestoreapi.com",
+						"products",
+						"busquedaPorPrecioMayorA1"
+					],
+					"query": [
+						{
+							"key": "precioMinimo",
+							"value": "1000"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ActualizarProducto",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"Cosmopolitan\",\r\n    \"price\": 1300,\r\n    \"description\": \"Trago\",\r\n    \"category\": \"Alcohol\",\r\n    \"image\": \"Cosmopolitan.png\",\r\n    \"rating\": {\r\n        \"rate\": 8.0,\r\n        \"contador\": 1\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/fakestoreapi.com/products/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"fakestoreapi.com",
+						"products",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ObtenerProductosDePreciosEntre",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/fakestoreapi.com/products/buscarPorPrecioEntre?precioMinimo=1000&precioMaximo=5000",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"fakestoreapi.com",
+						"products",
+						"buscarPorPrecioEntre"
+					],
+					"query": [
+						{
+							"key": "precioMinimo",
+							"value": "1000"
+						},
+						{
+							"key": "precioMaximo",
+							"value": "5000"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ObtenerProductosDePreciosEntre1",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/fakestoreapi.com/products/buscarPorPrecioEntre1?precioMinimo=1000&precioMaximo=5000",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"fakestoreapi.com",
+						"products",
+						"buscarPorPrecioEntre1"
+					],
+					"query": [
+						{
+							"key": "precioMinimo",
+							"value": "1000"
+						},
+						{
+							"key": "precioMaximo",
+							"value": "5000"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "EliminarProducto",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/fakestoreapi.com/products/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"fakestoreapi.com",
+						"products",
+						"3"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
